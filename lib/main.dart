@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Get Current Location'),
     );
   }
 }
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     print(
         "${_locationData!.longitude.toString()} --------------------------- longitude");
 
-    //* verilen datalar uzre xeritede bawlatmaq ucundu :::
+    //* verilen datalar uzre xeritede baslatmaq ucundu :::
     await MapsLauncher.launchCoordinates(
         _locationData!.latitude!, _locationData!.longitude!);
   }
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: getLocation,
-        tooltip: 'Increment',
+        tooltip: 'find Location',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
