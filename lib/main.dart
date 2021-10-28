@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     print(
         "${_locationData!.longitude.toString()} --------------------------- longitude");
 
+    //* verilen datalar uzre xeritede bawlatmaq ucundu :::
     await MapsLauncher.launchCoordinates(
         _locationData!.latitude!, _locationData!.longitude!);
   }
