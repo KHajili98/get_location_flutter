@@ -1,8 +1,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gps_location">
+        <uses-permission android:name="android.permission.INTERNET"/>
+         <!-- Always include this permission -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  <!-- Include only if your app benefits from precise location access. -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+
    <application
         android:label="gps_location"
         android:icon="@mipmap/ic_launcher">
+          <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAWS1iQ1d1g9t4KClJ5cz58gNdLnQ5c1YE"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
